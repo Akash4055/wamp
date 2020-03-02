@@ -59,13 +59,14 @@
 		if ($conn->query($sql)===TRUE)
 		{
 			echo"data inserted";
+			header("location:login.php");
 		}
 		else
 		{
 			echo"error inserting data".$conn->error;
 		}
 		
-		header("location:login.php");
+		
 		$conn->close();
 	?>
 	</body>
